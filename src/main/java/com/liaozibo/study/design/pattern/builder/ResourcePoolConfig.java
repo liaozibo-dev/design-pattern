@@ -14,7 +14,8 @@ public class ResourcePoolConfig {
     private int maxIdle; // 最大空闲线程数（非必填）
     private int minIdle; // 最小空闲线程数（非必填）
 
-    public ResourcePoolConfig(Builder builder) {
+    // 将构造器设置成私有，避免外部调用
+    private ResourcePoolConfig(Builder builder) {
         name = builder.name;
         maxTotal = builder.maxTotal;
         maxIdle = builder.maxIdle;
